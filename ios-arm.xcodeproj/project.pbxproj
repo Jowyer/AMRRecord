@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F22A21917A2443200479A49 /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F22A20C17A2443200479A49 /* amrFileCodec.m */; };
+		2F22A21A17A2443200479A49 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F22A21517A2443200479A49 /* libopencore-amrnb.a */; };
+		2F22A21B17A2443200479A49 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F22A21617A2443200479A49 /* libopencore-amrwb.a */; };
+		2F22A21C17A2443200479A49 /* RecordAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F22A21817A2443200479A49 /* RecordAudio.m */; };
 		37EF25E81790EE020097E941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EF25E71790EE020097E941 /* UIKit.framework */; };
 		37EF25EA1790EE020097E941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EF25E91790EE020097E941 /* Foundation.framework */; };
 		37EF25EC1790EE020097E941 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EF25EB1790EE020097E941 /* CoreGraphics.framework */; };
@@ -16,10 +20,6 @@
 		37EF25FA1790EE020097E941 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EF25F91790EE020097E941 /* Default.png */; };
 		37EF25FC1790EE020097E941 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EF25FB1790EE020097E941 /* Default@2x.png */; };
 		37EF25FE1790EE020097E941 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EF25FD1790EE020097E941 /* Default-568h@2x.png */; };
-		37EF26191790EE1C0097E941 /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EF260C1790EE1C0097E941 /* amrFileCodec.m */; };
-		37EF261A1790EE1C0097E941 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EF26151790EE1C0097E941 /* libopencore-amrnb.a */; };
-		37EF261B1790EE1C0097E941 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EF26161790EE1C0097E941 /* libopencore-amrwb.a */; };
-		37EF261C1790EE1C0097E941 /* RecordAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EF26181790EE1C0097E941 /* RecordAudio.m */; };
 		37EF261E1790EF5F0097E941 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EF261D1790EF5F0097E941 /* AVFoundation.framework */; };
 		37EF26201790EF6E0097E941 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EF261F1790EF6E0097E941 /* AudioToolbox.framework */; };
 		37EF262A1790F5F40097E941 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EF26281790F5F40097E941 /* DemoViewController.m */; };
@@ -27,6 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F22A20B17A2443200479A49 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		2F22A20C17A2443200479A49 /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
+		2F22A20F17A2443200479A49 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		2F22A21017A2443200479A49 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		2F22A21217A2443200479A49 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		2F22A21317A2443200479A49 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		2F22A21517A2443200479A49 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		2F22A21617A2443200479A49 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		2F22A21717A2443200479A49 /* RecordAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAudio.h; sourceTree = "<group>"; };
+		2F22A21817A2443200479A49 /* RecordAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAudio.m; sourceTree = "<group>"; };
 		37EF25E41790EE020097E941 /* ios-arm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-arm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EF25E71790EE020097E941 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37EF25E91790EE020097E941 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,16 +50,6 @@
 		37EF25F91790EE020097E941 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		37EF25FB1790EE020097E941 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		37EF25FD1790EE020097E941 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		37EF260B1790EE1C0097E941 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
-		37EF260C1790EE1C0097E941 /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
-		37EF260F1790EE1C0097E941 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		37EF26101790EE1C0097E941 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		37EF26121790EE1C0097E941 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		37EF26131790EE1C0097E941 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		37EF26151790EE1C0097E941 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		37EF26161790EE1C0097E941 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
-		37EF26171790EE1C0097E941 /* RecordAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAudio.h; sourceTree = "<group>"; };
-		37EF26181790EE1C0097E941 /* RecordAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAudio.m; sourceTree = "<group>"; };
 		37EF261D1790EF5F0097E941 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		37EF261F1790EF6E0097E941 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		37EF26271790F5F40097E941 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
@@ -67,18 +67,67 @@
 				37EF25E81790EE020097E941 /* UIKit.framework in Frameworks */,
 				37EF25EA1790EE020097E941 /* Foundation.framework in Frameworks */,
 				37EF25EC1790EE020097E941 /* CoreGraphics.framework in Frameworks */,
-				37EF261A1790EE1C0097E941 /* libopencore-amrnb.a in Frameworks */,
-				37EF261B1790EE1C0097E941 /* libopencore-amrwb.a in Frameworks */,
+				2F22A21A17A2443200479A49 /* libopencore-amrnb.a in Frameworks */,
+				2F22A21B17A2443200479A49 /* libopencore-amrwb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F22A20A17A2443200479A49 /* AMRRecording */ = {
+			isa = PBXGroup;
+			children = (
+				2F22A20B17A2443200479A49 /* amrFileCodec.h */,
+				2F22A20C17A2443200479A49 /* amrFileCodec.m */,
+				2F22A20D17A2443200479A49 /* include */,
+				2F22A21417A2443200479A49 /* lib */,
+				2F22A21717A2443200479A49 /* RecordAudio.h */,
+				2F22A21817A2443200479A49 /* RecordAudio.m */,
+			);
+			path = AMRRecording;
+			sourceTree = "<group>";
+		};
+		2F22A20D17A2443200479A49 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				2F22A20E17A2443200479A49 /* opencore-amrnb */,
+				2F22A21117A2443200479A49 /* opencore-amrwb */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		2F22A20E17A2443200479A49 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				2F22A20F17A2443200479A49 /* interf_dec.h */,
+				2F22A21017A2443200479A49 /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		2F22A21117A2443200479A49 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				2F22A21217A2443200479A49 /* dec_if.h */,
+				2F22A21317A2443200479A49 /* if_rom.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		2F22A21417A2443200479A49 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2F22A21517A2443200479A49 /* libopencore-amrnb.a */,
+				2F22A21617A2443200479A49 /* libopencore-amrwb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		37EF25DB1790EE020097E941 = {
 			isa = PBXGroup;
 			children = (
-				37EF260A1790EE1C0097E941 /* arm */,
+				2F22A20A17A2443200479A49 /* AMRRecording */,
 				37EF25ED1790EE020097E941 /* ios-arm */,
 				37EF25E61790EE020097E941 /* Frameworks */,
 				37EF25E51790EE020097E941 /* Products */,
@@ -130,55 +179,6 @@
 				37EF25FD1790EE020097E941 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		37EF260A1790EE1C0097E941 /* arm */ = {
-			isa = PBXGroup;
-			children = (
-				37EF260B1790EE1C0097E941 /* amrFileCodec.h */,
-				37EF260C1790EE1C0097E941 /* amrFileCodec.m */,
-				37EF260D1790EE1C0097E941 /* include */,
-				37EF26141790EE1C0097E941 /* lib */,
-				37EF26171790EE1C0097E941 /* RecordAudio.h */,
-				37EF26181790EE1C0097E941 /* RecordAudio.m */,
-			);
-			path = arm;
-			sourceTree = "<group>";
-		};
-		37EF260D1790EE1C0097E941 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				37EF260E1790EE1C0097E941 /* opencore-amrnb */,
-				37EF26111790EE1C0097E941 /* opencore-amrwb */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		37EF260E1790EE1C0097E941 /* opencore-amrnb */ = {
-			isa = PBXGroup;
-			children = (
-				37EF260F1790EE1C0097E941 /* interf_dec.h */,
-				37EF26101790EE1C0097E941 /* interf_enc.h */,
-			);
-			path = "opencore-amrnb";
-			sourceTree = "<group>";
-		};
-		37EF26111790EE1C0097E941 /* opencore-amrwb */ = {
-			isa = PBXGroup;
-			children = (
-				37EF26121790EE1C0097E941 /* dec_if.h */,
-				37EF26131790EE1C0097E941 /* if_rom.h */,
-			);
-			path = "opencore-amrwb";
-			sourceTree = "<group>";
-		};
-		37EF26141790EE1C0097E941 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				37EF26151790EE1C0097E941 /* libopencore-amrnb.a */,
-				37EF26161790EE1C0097E941 /* libopencore-amrwb.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +249,9 @@
 			files = (
 				37EF25F41790EE020097E941 /* main.m in Sources */,
 				37EF25F81790EE020097E941 /* AppDelegate.m in Sources */,
-				37EF26191790EE1C0097E941 /* amrFileCodec.m in Sources */,
-				37EF261C1790EE1C0097E941 /* RecordAudio.m in Sources */,
 				37EF262A1790F5F40097E941 /* DemoViewController.m in Sources */,
+				2F22A21917A2443200479A49 /* amrFileCodec.m in Sources */,
+				2F22A21C17A2443200479A49 /* RecordAudio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +334,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/arm/lib\"",
+					"\"$(SRCROOT)/AMRRecording/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -350,6 +351,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/arm/lib\"",
+					"\"$(SRCROOT)/AMRRecording/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -376,6 +378,7 @@
 				37EF26091790EE020097E941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
