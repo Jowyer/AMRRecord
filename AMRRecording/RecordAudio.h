@@ -35,6 +35,4 @@
 -(void) stopPlay;
 
 -(NSData *)decodeAmr:(NSData *)data;
-
--(void)setRecordAvailability;
 @end
