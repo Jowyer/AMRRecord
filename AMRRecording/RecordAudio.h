@@ -25,12 +25,16 @@
     AVAudioPlayer * avPlayer;
 }
 
-@property (nonatomic,assign)id<RecordAudioDelegate> delegate;
+@property (nonatomic, assign)id<RecordAudioDelegate> delegate;
+@property (nonatomic, retain)AVAudioRecorder *recorder;
 
-- (NSURL *) stopRecord ;
 - (void) startRecord;
+- (NSURL *) stopRecord ;
 
 -(void) play:(NSData*) data;
 -(void) stopPlay;
-+(NSTimeInterval) getAudioTime:(NSData *) data;
+
+-(NSData *)decodeAmr:(NSData *)data;
+
+-(void)setRecordAvailability;
 @end

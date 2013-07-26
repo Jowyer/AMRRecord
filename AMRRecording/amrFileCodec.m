@@ -255,7 +255,8 @@ void WriteWAVEHeader(NSMutableData* fpwave, int nFrame)
 
 }
 
-NSData* DecodeAMRToWAVE(NSData* data) {
+NSData* DecodeAMRToWAVE(NSData* data)
+{
 	NSMutableData* fpwave = nil;
 	void * destate;
 	int nFrameCount = 0;
@@ -341,13 +342,13 @@ NSData* DecodeAMRToWAVE(NSData* data) {
 	//fpwave = fopen([docFilePath cStringUsingEncoding:NSASCIIStringEncoding], "r+");
     //if (!bErr) {
         
-    NSMutableData *out = [[[NSMutableData alloc]init] autorelease];
-	WriteWAVEHeader(out, nFrameCount);
-    [out appendData:fpwave];
+    NSMutableData *waveData = [[[NSMutableData alloc] init] autorelease];
+	WriteWAVEHeader(waveData, nFrameCount);
+    [waveData appendData:fpwave];
 	//fclose(fpwave);
     [fpwave release];
 	
-	return out;
+	return waveData;
     //}
     
     // return data;
@@ -452,10 +453,10 @@ NSData* EncodePCMToAMR(char* data, int maxLen,int nChannels, int nBitsPerSample)
 	/* bitstream filetype */
 	unsigned char amrFrame[MAX_AMR_FRAME_SIZE];
 
-    NSMutableData* out = [[[NSMutableData alloc]init] autorelease];
+    NSMutableData* amrData = [[[NSMutableData alloc] init] autorelease];
 	/* write magic number to indicate single channel AMR file storage format */
 	//bytes = fwrite(AMR_MAGIC_NUMBER, sizeof(char), strlen(AMR_MAGIC_NUMBER), fpamr);
-    [out appendBytes:AMR_MAGIC_NUMBER length:strlen(AMR_MAGIC_NUMBER)];
+    [amrData appendBytes:AMR_MAGIC_NUMBER length:strlen(AMR_MAGIC_NUMBER)];
 	
 	/* skip to pcm audio data*/
 	//SkipToPCMAudioData(fpwave);
@@ -465,7 +466,8 @@ NSData* EncodePCMToAMR(char* data, int maxLen,int nChannels, int nBitsPerSample)
 	while(1)
         {
 		// read one pcm frame
-        if ((data-oldBuf+320)>maxLen) {
+        if ((data-oldBuf+320)>maxLen)
+        {
             break;
         }
 		int nRead = ReadPCMFrameData(speech, data, nChannels, nBitsPerSample);
@@ -479,7 +481,7 @@ NSData* EncodePCMToAMR(char* data, int maxLen,int nChannels, int nBitsPerSample)
 		
 		bytes += byte_counter;
 		//fwrite(amrFrame, sizeof (unsigned char), byte_counter, fpamr );
-        [out appendBytes:amrFrame length:byte_counter];
+        [amrData appendBytes:amrFrame length:byte_counter];
         }
 	
 	Encoder_Interface_exit(enstate);
@@ -488,10 +490,10 @@ NSData* EncodePCMToAMR(char* data, int maxLen,int nChannels, int nBitsPerSample)
     NSArray *paths               = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPath       = [paths objectAtIndex:0];
     NSString *wavFile        = [documentPath stringByAppendingPathComponent:[NSString stringWithFormat:@"88.amr"]];
-    [out writeToFile:wavFile atomically:YES];
+    [amrData writeToFile:wavFile atomically:YES];
 #endif
     
-	return out;
+	return amrData;
 }
 
 //http://developer.apple.com/library/mac/#documentation/MusicAudio/Reference/CAFSpec/CAF_spec/CAF_spec.html#//apple_ref/doc/uid/TP40001862-CH210-SW1
@@ -552,13 +554,8 @@ int SkipCaffHead(char* buf){
 //调用方式为 EncodeWAVEToAMR(pcmData,1,16);
 NSData* EncodeWAVEToAMR(NSData* data, int nChannels, int nBitsPerSample)
 {
-    NSArray *paths               = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath       = [paths objectAtIndex:0];
-    NSString *wavFile        = [documentPath stringByAppendingPathComponent:[NSString stringWithFormat:@"11.caf"]];
-    NSLog(@"documentPath=%@", documentPath);
-    
-    if (data==nil){
-        //data = [NSData dataWithContentsOfFile:wavFile];
+    if (data==nil)
+    {
         return nil;
     }
     
@@ -568,7 +565,8 @@ NSData* EncodeWAVEToAMR(NSData* data, int nChannels, int nBitsPerSample)
     
 
     nPos += SkipCaffHead(buf);
-    if (nPos>=maxLen) {
+    if (nPos>=maxLen)
+    {
         return nil;
     }
     
